@@ -1,0 +1,11 @@
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+
+      - run: ddev composer install
