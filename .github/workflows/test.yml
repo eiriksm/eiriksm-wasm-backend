@@ -2,7 +2,7 @@ on: [push, pull_request]
 name: Test
 
 jobs:
-  test:
+  test_install:
     runs-on: ubuntu-latest
     name: Test install
     steps:
@@ -12,3 +12,15 @@ jobs:
 
       - run: ddev composer install
       - run: ddev composer site-install
+
+  test_build_wasm:
+    runs-on: ubuntu-latest 
+    name: Test build wasm
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup DDEV
+        uses: ddev/github-action-setup-ddev@v1
+
+      - run: ddev composer install
+      - run: ddev composer build-drupal-wasm
+      
