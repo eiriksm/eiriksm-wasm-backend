@@ -37,6 +37,11 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+      "site-install": [
+        "drush si --existing-config --yes"
+      ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
