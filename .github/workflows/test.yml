@@ -10,3 +10,4 @@ jobs:
         uses: ddev/github-action-setup-ddev@v1
 
       - run: ddev composer install
+      - run: ddev composer site-install
