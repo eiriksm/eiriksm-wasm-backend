@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99f6f1044d9b9592d50ea694a83497ad",
+    "content-hash": "57f1ff184a7f79d0f39b1a4a8572491b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1644,6 +1644,53 @@
                 }
             ],
             "time": "2024-12-27T00:36:43+00:00"
+        },
+        {
+            "name": "eiriksm/build-drupal-wasm",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eiriksm/build-drupal-wasm.git",
+                "reference": "1cd166853c7ebae64aca879673f70fdc93a19a37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eiriksm/build-drupal-wasm/zipball/1cd166853c7ebae64aca879673f70fdc93a19a37",
+                "reference": "1cd166853c7ebae64aca879673f70fdc93a19a37",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php-tuf/composer-stager": "^2-beta",
+                "webflo/drupal-finder": "^1.3"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^10.5",
+                "slevomat/coding-standard": "^8.15",
+                "squizlabs/php_codesniffer": "^3.10"
+            },
+            "default-branch": true,
+            "type": "composer-plugin",
+            "extra": {
+                "class": "eiriksm\\BuildDrupalWasm\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "eiriksm\\BuildDrupalWasm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Attempt to build an existing site into a deployable WASM version",
+            "support": {
+                "issues": "https://github.com/eiriksm/build-drupal-wasm/issues",
+                "source": "https://github.com/eiriksm/build-drupal-wasm/tree/main"
+            },
+            "time": "2024-10-16T06:44:20+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -6289,12 +6336,60 @@
                 }
             ],
             "time": "2025-01-29T07:06:14+00:00"
+        },
+        {
+            "name": "webflo/drupal-finder",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webflo/drupal-finder.git",
+                "reference": "73045060b0894c77962a10cff047f72872d8810c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webflo/drupal-finder/zipball/73045060b0894c77962a10cff047f72872d8810c",
+                "reference": "73045060b0894c77962a10cff047f72872d8810c",
+                "shasum": ""
+            },
+            "require": {
+                "composer-runtime-api": "^2.2",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^10.4",
+                "symfony/process": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DrupalFinder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Weber",
+                    "email": "florian@webflo.org"
+                }
+            ],
+            "description": "Helper class to locate a Drupal installation.",
+            "support": {
+                "issues": "https://github.com/webflo/drupal-finder/issues",
+                "source": "https://github.com/webflo/drupal-finder/tree/1.3.1"
+            },
+            "time": "2024-06-28T13:45:36+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "eiriksm/build-drupal-wasm": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
